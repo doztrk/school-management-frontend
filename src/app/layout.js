@@ -1,5 +1,5 @@
 import { Footer } from "@/components/common/footer/footer";
-import { MainMenubar } from "@/components/common/header/main-menubar";
+import { MainMenuBar } from "@/components/common/header/main-menubar";
 import { Topbar } from "@/components/common/header/topbar";
 import { config } from "@/helpers/config";
 import { montserrat } from "@/helpers/fonts";
@@ -17,11 +17,11 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en" className={montserrat.variable}>
 			<body>
-        <Topbar/>
-        <MainMenubar/>
-        {children}
-        <Footer/>
-        </body>
+				<Topbar />
+				<MainMenuBar />
+				{children}
+				<Footer />
+			</body>
 		</html>
 	);
 }

@@ -1,21 +1,17 @@
 @use "../../../styles/variables" as *;
 @use "../../../styles/mixins" as *;
-
 .topbar {
 	background-color: $color1;
 	color: $color2;
 	padding-top: 10px;
 	padding-bottom: 10px;
-
 	.container {
-        @include flex($ai:center, $fw: nowrap);
-
+		@include flex($ai: center, $fw: nowrap);
         .slogan{
-            width:70%;
+            width: 70%;
             overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-           
+            text-overflow: ellipsis; /* Using `text-overflow: ellipsis` to truncate text with an ellipsis */
+            white-space: nowrap; /* Using `white-space: nowrap` to prevent text from wrapping to next line */
         }
 	}
 }

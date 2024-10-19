@@ -5,19 +5,11 @@
 	padding: $padding;
 	list-style: none;
 }
-
 @mixin border-radius($radius) {
 	@each $v in $vendors {
 		#{$v}border-radius: $radius;
 	}
 }
-
-@mixin transform($val) {
-	@each $v in $vendors {
-		#{$v}transform: $val;
-	}
-}
-
 @mixin fligran($color: gray, $opacity: 0.5) {
 	background-color: rgba($color, $opacity);
 	position: absolute;
@@ -26,14 +18,12 @@
 	right: 0;
 	bottom: 0;
 }
-
 @mixin flex-center($direction: row) {
 	display: flex;
 	flex-direction: $direction;
 	justify-content: center;
 	align-items: center;
 }
-
 @mixin flex($fd: row, $jc: space-between, $ai: stretch, $gap: 0, $fw: wrap) {
 	display: flex;
 	flex-direction: $fd;
@@ -42,7 +32,16 @@
 	gap: $gap;
 	flex-wrap: $fw;
 }
-
 @mixin shadow($type, $val) {
 	#{$type}-shadow: $val;
 }
+/* 
+@mixin shadow($type, $val){
+    @if $type = box{
+        box-shadow: $val;
+    }
+    @else {
+        text-shadow: $val;
+    }
+    
+} */

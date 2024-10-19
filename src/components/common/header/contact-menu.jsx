@@ -3,14 +3,15 @@ import { config } from "@/helpers/config";
 import React from "react";
 import { Nav } from "react-bootstrap";
 
-const menuItems = Object.entries(config.contact.socialMedia);
+const menuItems = Object.entries(config.contact.info);
+console.log(menuItems);
 
-export const SocialMenu = (props) => {
+export const ContactMenu = (props) => {
 	return (
 		<Nav {...props}>
 			{menuItems.map((item) => (
-				<Nav.Link key={item[0]} href={item[1].url}>
-					<i className={item[1].icon}></i> {item[0]}
+				<Nav.Link key={item[0]} href={item[1].link}>
+					<i className={item[1].icon}></i> {item[1].value}
 				</Nav.Link>
 			))}
 		</Nav>
