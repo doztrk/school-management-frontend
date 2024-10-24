@@ -13,6 +13,7 @@ export const InstructorCard = (props) => {
 				width={400}
 				height={500}
 				className="card-img-top card-img-bottom"
+				alt={firstName + " " + lastName}
 			/>
 			<Card.Title>
 				<h4>
