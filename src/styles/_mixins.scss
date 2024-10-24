@@ -15,6 +15,12 @@
 		#{$v}transform: $val;
 	}
 }
+
+@mixin transition($val) {
+	@each $v in $vendors {
+		#{$v}transition: $val;
+	}
+}
 @mixin fligran($color: gray, $opacity: 0.5) {
 	background-color: rgba($color, $opacity);
 	position: absolute;

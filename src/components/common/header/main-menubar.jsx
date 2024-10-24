@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
+import { Container, Navbar, Offcanvas } from "react-bootstrap";
 import { Logo } from "./logo";
 import { MainMenu } from "./main-menu";
 import { ButtonCallNow } from "./button-call-now";
@@ -9,17 +9,27 @@ import { config } from "@/helpers/config";
 
 export const MainMenuBar = () => {
 	return (
-		<Navbar expand="lg" sticky="top" className="bg-body-tertiary">
+		<Navbar
+			expand="lg"
+			sticky="top"
+			className="bg-body-tertiary"
+			collapseOnSelect
+		>
 			<Container>
 				<Logo />
 				<Navbar.Toggle aria-controls="main-menu" />
-				<Navbar.Offcanvas id="main-menu" aria-labelledby="main-menu-title" placement="end">
+				<Navbar.Offcanvas
+					id="main-menu"
+					aria-labelledby="main-menu-title"
+					placement="end"
+				>
 					<Offcanvas.Header closeButton>
 						<Offcanvas.Title id="main-menu-title">
-							<Image src="/img/logos/logo-one-line.png"
-							width={253} 
-							height={29}
-							alt={config.project.name} 
+							<Image
+								src="/img/logos/logo-one-line.png"
+								width={253}
+								height={29}
+								alt={config.project.name}
 							/>
 						</Offcanvas.Title>
 					</Offcanvas.Header>
